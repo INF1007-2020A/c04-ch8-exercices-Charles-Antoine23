@@ -35,7 +35,7 @@ def exercice3(file_path, result_file_path):
         for note in note_percent:
             for key, value in PERCENTAGE_TO_LETTER.items():
                 if value[0] <= int(note) < value[1]:
-                    f.write(note + " " + key)
+                    f.write(note.strip() + " " + key + "\n")
                     break
 
 
@@ -43,5 +43,6 @@ def exercice3(file_path, result_file_path):
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
+    # exercice3("./notes.txt", "./notes_letter.txt")
     exercice3("./notes.txt", "./notes_letter.txt")
     pass
